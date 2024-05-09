@@ -25,5 +25,5 @@ stages:
             displayName: 'Push Docker Image'
             inputs:
               command: 'push'
-              repository: 'saiid211/my_project'
+              repository: 'my_project'
               tags: 'new'
