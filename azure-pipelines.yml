@@ -26,4 +26,4 @@ stages:
             inputs:
               command: 'push'
               repository: 'saiid211/my_project'
-              tags: '$(Build.BuildId)'
+              tags: 'new
