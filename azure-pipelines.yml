@@ -13,31 +13,7 @@ stages:
       - job: Build
         displayName: 'Build job'
         steps:
-          - script: |
-              # Commands for building the web application
-              # For example:
-              npm install
-              npm run build
-            displayName: 'Build'
-
-  - stage: Test
-    displayName: 'Test stage'
-    jobs:
-      - job: Test
-        displayName: 'Test job'
-        steps:
-          - script: |
-              # Commands for running automated tests
-              # For example:
-              npm test
-            displayName: 'Run Tests'
-
-  - stage: Deploy
-    displayName: 'Deploy stage'
-    jobs:
-      - job: Deploy
-        displayName: 'Deploy job'
-        steps:
+          - checkout: self
           - task: Docker@2
             displayName: 'Build Docker Image'
             inputs:
